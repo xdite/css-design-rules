@@ -1,0 +1,147 @@
+## HTML 文件結構
+
+<pre>
+&lt;!DOCTYPE html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;demo&lt;/title&gt;
+    &lt;link href=&quot;#&quot; media=&quot;screen&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;%= yield %&gt;
+    &lt;script src=&quot;#&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+### 雙欄版面
+
+<pre>
+&lt;div id=&quot;container&quot;&gt;
+  &lt;div id=&quot;header&quot;&gt;
+    &lt;h1&gt;&lt;a&gt;LOGO&lt;/a&gt;&lt;/h1&gt;
+    &lt;div id=&quot;main-navigation&quot; class=&quot;nav clearfix&quot;&gt; &lt;/div&gt;
+    &lt;div id=&quot;user-navigation&quot; class=&quot;nav clearfix&quot;&gt; &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;main&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;sidebar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;
+</pre>
+
+### 文本元件
+
+<pre>
+&lt;h1&gt;&lt;/h1&gt;
+&lt;h2&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;h5&gt;&lt;/h5&gt;
+&lt;h6&gt;&lt;/h6&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr/&gt;
+</pre>
+
+### 表格元件
+
+<pre>
+&lt;table&gt;
+  &lt;caption&gt;&#x8868;&#x683c;&#x6a19;&#x984c;&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;&#x6a19;&#x984c; A&lt;/th&gt;&lt;th&gt;&#x6a19;&#x984c; B&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th&gt;&#x6a19;&#x984c; X&lt;/th&gt;&lt;td&gt;&#x503c;&#x4e00;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;&#x6a19;&#x984c; Y&lt;/th&gt;&lt;td&gt;&#x503c;&#x4e8c;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;th&gt;&#x6a19;&#x5c3e;&lt;/th&gt;&lt;td&gt;&#x7e3d;&#x503c;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</pre>
+
+### 一般表單元件
+
+<pre>
+&lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;new_user&quot; class=&quot;form user&quot;&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;&#x4f7f;&#x7528;&#x8005;&#x8cc7;&#x6599;&lt;/legend&gt;
+    &lt;div class=&quot;inputs&quot;&gt;
+      &lt;label for=&quot;user_name&quot;&gt;&#x59d3;&#x540d;&lt;/label&gt;
+      &lt;input type=&quot;text&quot; name=&quot;user[name]&quot; value=&quot;&quot; id=&quot;user_name&quot; class=&quot;name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;inputs&quot;&gt;
+      &lt;label for=&quot;user_marriage&quot;&gt;&#x5df2;&#x5a5a;&lt;/label&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;user[marriage]&quot; value=&quot;1&quot; id=&quot;user_marriage&quot; class=&quot;marriage&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;buttons&quot;&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;&#x9001;&#x51fa;&quot; id=&quot;&quot; class=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+
+### 表單元件 (Handicraft)
+
+<pre>
+&lt;form action=&quot;/posts/2959/comments&quot; class=&quot;form right-label&quot; id=&quot;new_comment&quot; method=&quot;post&quot;&gt;
+  &lt;ul class=&quot;form-fields&quot;&gt;
+    &lt;li&gt;
+      &lt;label class=&quot;desc&quot; for=&quot;comment_guest_name&quot;&gt;&#x540d;&#x7a31;&lt;/label&gt;
+      &lt;div class=&quot;col&quot;&gt;
+        &lt;input class=&quot;field text&quot; id=&quot;comment_guest_name&quot; name=&quot;comment[guest_name]&quot; size=&quot;30&quot; type=&quot;text&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class=&quot;desc&quot; for=&quot;comment_guest_website&quot;&gt;&#x7db2;&#x5740;&lt;/label&gt;
+      &lt;div class=&quot;col&quot;&gt;
+        &lt;input class=&quot;field text&quot; id=&quot;comment_guest_website&quot; name=&quot;comment[guest_website]&quot; size=&quot;30&quot; type=&quot;text&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label class=&quot;desc&quot; for=&quot;comment_content&quot;&gt;&#x7559;&#x8a00;&#x5167;&#x6587;&lt;/label&gt;
+      &lt;div class=&quot;col&quot;&gt;
+        &lt;textarea class=&quot;field textarea&quot; cols=&quot;40&quot; id=&quot;comment_content&quot; name=&quot;comment[content]&quot; rows=&quot;20&quot;&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;buttons&quot;&gt;
+      &lt;input class=&quot;submit&quot; id=&quot;comment_submit&quot; name=&quot;commit&quot; type=&quot;submit&quot; value=&quot;&#x9001;&#x51fa;&quot; /&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;
+</pre>
+
+### 分頁元件 (WillPaginate)
+
+<pre>
+&lt;div class=&quot;pagination&quot;&gt;
+  &lt;span class=&quot;disabled prev_page&quot;&gt;&#x4e0a;&#x4e00;&#x9801;&lt;/span&gt;
+  &lt;span class=&quot;current&quot;&gt;1&lt;/span&gt;
+  &lt;a href=&quot;/posts?page=2&quot; rel=&quot;next&quot;&gt;2&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=3&quot;&gt;3&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=4&quot;&gt;4&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=5&quot;&gt;5&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=6&quot;&gt;6&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=7&quot;&gt;7&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=8&quot;&gt;8&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=9&quot;&gt;9&lt;/a&gt;
+  &lt;span class=&quot;gap&quot;&gt;&amp;hellip;&lt;/span&gt;
+  &lt;a href=&quot;/posts?page=76&quot;&gt;76&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=77&quot;&gt;77&lt;/a&gt;
+  &lt;a href=&quot;/posts?page=2&quot; class=&quot;next_page&quot; rel=&quot;next&quot;&gt;&#x4e0b;&#x4e00;&#x9801;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+### 列表使用 (li)
+
+<pre>
+&lt;ul&gt;
+  &lt;li class=&quot;first&quot;&gt; AAA&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt; BBB &lt;/li&gt;
+  &lt;li&gt;CCC&lt;/li&gt;
+  &lt;li&gt;YYY&lt;/li&gt;
+  &lt;li class=&quot;last&quot;&gt;ZZZ&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+* 如需針對第一個及最後一個 li 做特別處理，class 需命名為first、last。被選取的選項 class請命名為 active
